@@ -9,6 +9,7 @@ const uniqueCategList = [
       return curEle.category;
     })
   ),
+  "All",
 ];
 console.log(uniqueCategList);
 
@@ -17,6 +18,10 @@ const Restro = () => {
   const [uniqCatListing, setUniqCatListing] = useState(uniqueCategList);
 
   const filterData = (categories) => {
+    if (categories === "All") {
+      setMenuApiData(MenuApis);
+      return;
+    }
     const updatedFilterData = MenuApis.filter((curr) => {
       return curr.category === categories;
     });
