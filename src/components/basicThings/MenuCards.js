@@ -6,25 +6,20 @@ const MenuCards = ({ menuApiData }) => {
   return (
     <section className="main-card--container">
       {menuApiData.map((currElement) => {
+        const { id, image, name, category, price, description } = currElement; // Destructuring the currElement;
         return (
-          <div className="card-container" key={currElement.id}>
+          <div className="card-container" key={id}>
             <div className="card">
               <div className="card-body">
-                <span className="card-number card-circle subtitle">
-                  {currElement.id}
-                </span>
-                <span className="card-author subtitle">
-                  {currElement.category}
-                </span>
-                <h2 className="card-title">{currElement.name}</h2>
-                <span className="card-description subtitle">
-                  {currElement.description}
-                </span>
+                <span className="card-number card-circle subtitle">{id}</span>
+                <span className="card-author subtitle">{category}</span>
+                <h2 className="card-title">{name}</h2>
+                <span className="card-description subtitle">{description}</span>
                 <div className="card-read">Read</div>
               </div>
-              <img src={currElement.image} alt="image not found" />
+              <img src={image} alt="image not found" />
               <div className="span-price-order">
-                <span className="card-price">{currElement.price}</span>
+                <span className="card-price">{price}</span>
                 <span className="card-tag subtitle">Order Now</span>
               </div>
             </div>
