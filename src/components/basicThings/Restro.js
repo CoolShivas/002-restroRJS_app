@@ -2,11 +2,13 @@ import MenuCards from "./MenuCards";
 import MenuApis from "./MenuApis";
 import { useState } from "react";
 
-const uniqueCategList = new Set(
-  MenuApis.map((curEle) => {
-    return curEle.category;
-  })
-);
+const uniqueCategList = [
+  ...new Set(
+    MenuApis.map((curEle) => {
+      return curEle.category;
+    })
+  ),
+];
 console.log(uniqueCategList);
 
 const Restro = () => {
