@@ -1,11 +1,11 @@
-import MenuCards from "./components/basicThings/MenuCards";
+import Restro from "./components/basicThings/Restro";
 import AppName from "./components/AppName";
 
 const App = () => {
   return (
     <>
       <AppName></AppName>
-      <MenuCards></MenuCards>
+      <Restro></Restro>
     </>
   );
 };
