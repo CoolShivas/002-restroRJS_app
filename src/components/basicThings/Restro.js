@@ -5,15 +5,48 @@ import { useState } from "react";
 const Restro = () => {
   const [menuApiData, setMenuApiData] = useState(MenuApis);
 
+  const filterData = (categories) => {
+    const updatedFilterData = MenuApis.filter((curr) => {
+      return curr.category === categories;
+    });
+
+    setMenuApiData(updatedFilterData);
+  };
+
   return (
     <>
       <nav className="navbar">
         <div className="btn-group">
-          <button className="btn-group__item">Breakfast</button>
-          <button className="btn-group__item">Lunch</button>
-          <button className="btn-group__item">Evening</button>
-          <button className="btn-group__item">Dinner</button>
-          <button className="btn-group__item">All</button>
+          <button
+            className="btn-group__item"
+            onClick={() => filterData("breakfast")}
+          >
+            Breakfast
+          </button>
+          <button
+            className="btn-group__item"
+            onClick={() => filterData("lunch")}
+          >
+            Lunch
+          </button>
+          <button
+            className="btn-group__item"
+            onClick={() => filterData("evening")}
+          >
+            Evening
+          </button>
+          <button
+            className="btn-group__item"
+            onClick={() => filterData("dinner")}
+          >
+            Dinner
+          </button>
+          <button
+            className="btn-group__item"
+            onClick={() => setMenuApiData(MenuApis)}
+          >
+            All
+          </button>
         </div>
       </nav>
       <MenuCards menuApiData={menuApiData}></MenuCards>
