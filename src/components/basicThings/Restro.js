@@ -14,6 +14,7 @@ console.log(uniqueCategList);
 
 const Restro = () => {
   const [menuApiData, setMenuApiData] = useState(MenuApis);
+  const [uniqCatListing, setUniqCatListing] = useState(uniqueCategList);
 
   const filterData = (categories) => {
     const updatedFilterData = MenuApis.filter((curr) => {
@@ -25,7 +26,11 @@ const Restro = () => {
 
   return (
     <>
-      <Navbar filterData={filterData} setMenuApiData={setMenuApiData}></Navbar>
+      <Navbar
+        filterData={filterData}
+        setMenuApiData={setMenuApiData}
+        uniqCatListing={uniqCatListing}
+      ></Navbar>
       <MenuCards menuApiData={menuApiData}></MenuCards>
     </>
   );
