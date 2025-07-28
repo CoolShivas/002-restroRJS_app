@@ -125,6 +125,19 @@ html {
   cursor: pointer;
 }
 
+.card-price {
+  font-size: 2rem;
+  color: #b8bddd;
+  font-weight: 900;
+}
+
+.span-price-order {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: end;
+}
+
 .card-tag:hover {
   background: #aaa;
   color: black;

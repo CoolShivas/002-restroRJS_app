@@ -23,7 +23,10 @@ const MenuCards = ({ menuApiData }) => {
                 <div className="card-read">Read</div>
               </div>
               <img src={currElement.image} alt="image not found" />
-              <span className="card-tag subtitle">Order Now</span>
+              <div className="span-price-order">
+                <span className="card-price">{currElement.price}</span>
+                <span className="card-tag subtitle">Order Now</span>
+              </div>
             </div>
           </div>
         );
