@@ -1,7 +1,7 @@
 const AppName = () => {
   return (
     <div>
-      <h1>YFood Square</h1>
+      <header>"Y-Food Square"</header>
     </div>
   );
 };

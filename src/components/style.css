@@ -226,3 +226,16 @@ html {
   opacity: 1;
   transform: translatey(-2px);
 }
+
+/* ---------- AppName header styles ------------------ */
+header {
+  text-align: center;
+  padding: 4rem;
+  font-weight: bold;
+  font-size: 40px;
+  color: tomato;
+}
+
+header:hover {
+  color: yellowgreen;
+}
