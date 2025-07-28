@@ -1,3 +1,4 @@
+import Navbar from "./Navbar";
 import MenuCards from "./MenuCards";
 import MenuApis from "./MenuApis";
 import { useState } from "react";
@@ -24,40 +25,7 @@ const Restro = () => {
 
   return (
     <>
-      <nav className="navbar">
-        <div className="btn-group">
-          <button
-            className="btn-group__item"
-            onClick={() => filterData("breakfast")}
-          >
-            Breakfast
-          </button>
-          <button
-            className="btn-group__item"
-            onClick={() => filterData("lunch")}
-          >
-            Lunch
-          </button>
-          <button
-            className="btn-group__item"
-            onClick={() => filterData("evening")}
-          >
-            Evening
-          </button>
-          <button
-            className="btn-group__item"
-            onClick={() => filterData("dinner")}
-          >
-            Dinner
-          </button>
-          <button
-            className="btn-group__item"
-            onClick={() => setMenuApiData(MenuApis)}
-          >
-            All
-          </button>
-        </div>
-      </nav>
+      <Navbar filterData={filterData} setMenuApiData={setMenuApiData}></Navbar>
       <MenuCards menuApiData={menuApiData}></MenuCards>
     </>
   );
