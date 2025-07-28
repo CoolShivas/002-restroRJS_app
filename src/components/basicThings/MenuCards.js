@@ -4,7 +4,7 @@ const MenuCards = ({ menuApiData }) => {
   console.log(menuApiData); // Getting data on browser console;
 
   return (
-    <>
+    <section className="main-card--container">
       {menuApiData.map((curr, ind) => {
         return (
           <>
@@ -28,7 +28,7 @@ const MenuCards = ({ menuApiData }) => {
           </>
         );
       })}
-    </>
+    </section>
   );
 };
 
