@@ -1,7 +1,9 @@
+import AppName from "./components/AppName";
+
 const App = () => {
   return (
     <>
-      <h1>Shiva's Restro Food Square</h1>
+      <AppName></AppName>
     </>
   );
 };
