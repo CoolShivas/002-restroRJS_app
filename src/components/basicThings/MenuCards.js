@@ -1,6 +1,11 @@
+import MenuApis from "./MenuApis";
 import "../style.css";
+import { useState } from "react";
 
 const MenuCards = () => {
+  const [menuApiData, setMenuApiData] = useState(MenuApis);
+  console.log(menuApiData); // Getting the data on browser console;
+
   return (
     <>
       <div className="card-container">
